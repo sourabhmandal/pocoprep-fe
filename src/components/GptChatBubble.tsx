@@ -5,6 +5,7 @@ import IconButton from '@mui/joy/IconButton';
 import Typography from '@mui/joy/Typography';
 import FavoriteBorderTwoToneIcon from '@mui/icons-material/FavoriteBorderTwoTone';
 import CopyAllTwoToneIcon from '@mui/icons-material/CopyAllTwoTone';
+import { Box, CardOverflow, Divider } from '@mui/joy';
 
 function GptChatBubble() {
     return (
@@ -14,7 +15,8 @@ function GptChatBubble() {
                 width: '80%',
                 overflow: 'auto',
                 resize: 'horizontal',
-                backgroundColor: 'transparent'
+                backgroundColor: 'transparent',
+                marginY: 4
             }}
         >
             <CardContent>
@@ -33,14 +35,16 @@ function GptChatBubble() {
                     Many desktop publishing packages and web page
                 </Typography>
             </CardContent>
-            <CardActions>
-                <IconButton color='success' variant='plain' aria-label="menu" sx={{ borderRadius: '100%' }}>
-                    <CopyAllTwoToneIcon sx={{fontSize: 18}} />
-                </IconButton>
-                <IconButton color='danger' variant='plain' aria-label="menu" sx={{ borderRadius: '100%' }}>
-                    <FavoriteBorderTwoToneIcon sx={{fontSize: 18}} />
-                </IconButton>
-            </CardActions>
+            <CardOverflow>
+                <Box sx={{display: 'flex'}} gap={1}>
+                    <IconButton color='success' variant='plain' aria-label="menu" sx={{ borderRadius: '100%' }}>
+                        <CopyAllTwoToneIcon sx={{ fontSize: 18 }} />
+                    </IconButton>
+                    <IconButton color='danger' variant='plain' aria-label="menu" sx={{ borderRadius: '100%' }}>
+                        <FavoriteBorderTwoToneIcon sx={{ fontSize: 18 }} />
+                    </IconButton>
+                </Box>
+            </CardOverflow>
         </Card>
     )
 }
