@@ -27,7 +27,7 @@ function HomePage() {
         <UserChatBubble />
         <GptChatBubble />
       </div>
-      <Box style={{ position: 'sticky', bottom: 0, padding: '20px 100px', zIndex: 1000}}>
+      <Box style={{ position: 'sticky', bottom: 0, padding: '20px 10%', zIndex: 1000}}>
         <ChatInputFeild />
       </Box>
     </div>
