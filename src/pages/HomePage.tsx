@@ -1,16 +1,19 @@
-import { Button, Typography } from '@mui/joy'
-import { useCounter } from '../store/useRoadmap'
+import GptChatBubble from '../components/GptChatBubble'
 import TopAppBar from '../components/TopAppbar'
+import UserChatBubble from '../components/UserChatBubble'
 
 function HomePage() {
-  const { count, increment } = useCounter()
-
   return (
-    <div style={{ backgroundColor: "#FFFFECB3", height: '100vh' }}>
-        <TopAppBar />
-        <Typography level="h1">Home Page</Typography>
-        <Typography level="h3">Count: {count}</Typography>
-        <Button onClick={increment}>Increase</Button>
+    <div style={{ backgroundColor: "#FFFFECB3", minHeight: '100vh' }}>
+      <TopAppBar />
+      <div style={{ padding: '20px', maxWidth: '1000px', margin: '0 auto' }}>
+        <UserChatBubble />
+        <GptChatBubble />
+        <UserChatBubble />
+        <GptChatBubble />
+        <UserChatBubble />
+        <GptChatBubble />
+      </div>
     </div>
   )
 }
